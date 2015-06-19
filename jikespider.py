@@ -16,7 +16,7 @@ class spider(object):
 		now_page = int(re.search('pageNum=(\d+)',url,re.S).group(1))
 		page_group = []
 		for i in range(now_page,total_page+1):
-			linke = re.sub('pageNum=\d+','pageNum=%s'%i,url,re.S)
+			link = re.sub('pageNum=\d+','pageNum=%s'%i,url,re.S)
 			page_group.append(link)
 		return page_group
 	def geteverclass(self,source):
